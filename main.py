@@ -1,8 +1,5 @@
 from tkinter import *
-import random
-import time
-import datetime
-from tkinter import Tk, StringVar, ttk
+from tkinter import Tk, ttk
 from PIL import Image, ImageTk
 import PIL.Image
 
@@ -276,7 +273,7 @@ lblTitle.grid(row=0,column=0)
 
 
 #Logo
-LogoImageObject = Image.open("C:/Users/User/Desktop/Fall Semester/COSC 121 ComSciA/Python_Coding/FinalProject/1.png").resize((130, 130))
+LogoImageObject = Image.open("1.png").resize((130, 130))
 LogoImage = ImageTk.PhotoImage(LogoImageObject)
 LogoLabel = ttk.Label(Tops, image = LogoImage, background = "#0F1110")
 LogoLabel.grid(row = 0, column = 0, sticky = "W")
@@ -408,7 +405,7 @@ def process_payment(payment_method, frame):
         widget.destroy()
 
     if payment_method == 3:
-        img_path = "C:/Users/User/Desktop/Fall Semester/COSC 121 ComSciA/Python_Coding/FinalProject/2.jpg"
+        img_path = "2.jpg"
         original_img = PIL.Image.open(img_path)
         # resized_img = original_img.resize((450, 450))  
 
@@ -420,7 +417,7 @@ def process_payment(payment_method, frame):
         label.pack()
     elif payment_method == 2:
         # Credit card
-        credit_card_img_path = "C:/Users/User/Desktop/Fall Semester/COSC 121 ComSciA/Python_Coding/FinalProject/3.png"
+        credit_card_img_path = "3.png"
         credit_card_img = PIL.Image.open(credit_card_img_path)
         resized_credit_card_img = credit_card_img.resize((450, 450))
 
